@@ -24,6 +24,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm install
+      - run: npx prettier --write src/pages/index.astro
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
