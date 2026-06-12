@@ -26,7 +26,7 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 export default defineConfig({
   output: 'static',
   site: 'https://yujiezhu51.github.io',
-  base: '/aurora',
+  base: '/aurora/',
 
   integrations: [
     sitemap(),
