@@ -1,8 +1,8 @@
 site:
-  name: Aurora
-  site: 'https://yujiezhu51.github.io/aurora'
-  base: '/aurora/'
-  trailingSlash: true
+  name: Aurora US Consulting
+  site: ''https://aurorausconsulting.com'
+  base: '/'
+  trailingSlash: false
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
 
