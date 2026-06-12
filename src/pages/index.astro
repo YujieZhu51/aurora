@@ -1,40 +1,132 @@
-<Hero
-  actions={[
-    {
-      variant: 'primary',
-      text: 'Get Started',
-      href: '#contact',
-    },
-    {
-      text: 'Learn More',
-      href: '#services',
-    },
-  ]}
-  image={{
-    src: '~/assets/images/hero-image.png',
-    alt: 'Aurora Hero Image',
-  }}
->
-  <Fragment slot="title">
-    Your Ideas. Your Skills. Your Next Step.
-  </Fragment>
+---
+import Layout from '~/layouts/PageLayout.astro';
 
-  <Fragment slot="subtitle">
-    <span class="hidden sm:inline">
-      Aurora provides
-      <span class="font-semibold"> international education consulting</span>,
-      <span class="font-semibold"> professional development support</span>,
-      and
-      <span class="font-semibold"> technology training</span>
-      for global students and early-career professionals.
-    </span>
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 
-    <span class="block mb-1 sm:hidden font-bold text-blue-600">
-      Education. Growth. Technology.
-    </span>
+const metadata = {
+  title: 'Aurora — Your Ideas. Your Skills. Your Next Step.',
+  ignoreTitleTemplate: true,
+};
+---
 
-    Helping students and professionals build stronger applications,
-    career skills, and technical portfolios for academic and
-    professional success.
-  </Fragment>
-</Hero>
+<Layout metadata={metadata}>
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get Started',
+        href: '#contact',
+      },
+      {
+        text: 'Learn More',
+        href: '#features',
+      },
+    ]}
+    image={{ src: '~/assets/images/background.jpg', alt: 'Aurora background Image' }}
+  >
+    <Fragment slot="title">Your Ideas. Your Skills. Your Next Step.</Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Aurora provides <span class="font-semibold">international education consulting</span>,
+        <span class="font-semibold">professional development support</span>, and
+        <span class="font-semibold">technology training</span> for global students and early-career professionals.
+      </span>
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">Education. Growth. Technology.</span>
+      Helping students and professionals build stronger applications, career skills, and technical portfolios for academic
+      and professional success.
+    </Fragment>
+  </Hero>
+
+  <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" />
+
+  <Features
+    id="features"
+    tagline="Features"
+    title="What you get with AstroWind"
+    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023, 2024 and 2025."
+    items={[
+      {
+        title: 'Astro + Tailwind CSS Integration',
+        description:
+          'A seamless integration between two great frameworks that offer high productivity, performance and versatility. Now powered by Tailwind CSS v4.',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'Ready-to-use Components',
+        description:
+          'Widgets made with Tailwind CSS v4 ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Best Practices',
+        description:
+          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Excellent Page Speed',
+        description:
+          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Search Engine Optimization (SEO)',
+        description:
+          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Open to new ideas and contributions',
+        description:
+          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    tagline="Inside template"
+    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    items={[
+      {
+        title: 'Built on top of Astro v6',
+        description:
+          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+      },
+      {
+        title: 'Styled using Tailwind CSS v4',
+        description:
+          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+      },
+      {
+        title: 'Cross-browser compatibility',
+        description:
+          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
+      Gain a competitive advantage by incorporating industry leading practices
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+</Layout>
