@@ -1,6 +1,6 @@
 site:
   name: Aurora US Consulting
-  site: ''https://aurorausconsulting.com'
+  site: 'https://aurorausconsulting.com'
   base: '/'
   trailingSlash: false
 
