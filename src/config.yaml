@@ -2,7 +2,7 @@ site:
   name: Aurora
   site: 'https://yujiezhu51.github.io/aurora'
   base: '/aurora/'
-  trailingSlash: false
+  trailingSlash: true
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
 
